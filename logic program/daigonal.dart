@@ -1,6 +1,5 @@
 //diagonal element
 
-//20.Wap to set array in descending order.
 
 import 'dart:io';
 
@@ -10,13 +9,15 @@ void main() {
     [4, 5, 6],
     [7, 8, 9]
   ];
-  int temp;
+  int x=0;
   int i, j;
   for (i = 0; i < 3; i++) {
     for (j = 0; j < 3; j++) {
       if (i == j) {
-        print(l1[i][j]);
+        sum=l1[i][j];
+        x+=sum;
       }
     }
   }
+  print(x);
 }
