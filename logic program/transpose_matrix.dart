@@ -10,7 +10,8 @@ void main() {
 
   for (int i = 0; i < l1.length; i++) {
     for (int j = 0; j < l1.length; j++) {
-      print("${l1[j][i]}");
+      stdout.write(l1[i][j]);
     }
+    print("");
   }
 }
