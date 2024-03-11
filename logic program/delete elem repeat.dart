@@ -1,5 +1,5 @@
 //19.Wap to to find and delete repeat elements in array.
-//18.Wap to to find frequency of each elements in array.
+
 import 'dart:io';
 
 void main() {
