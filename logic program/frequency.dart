@@ -27,6 +27,4 @@ void main() {
     }
     fre = 1;
   }
-
-  for (i = 0; i < n; i++) {}
 }
