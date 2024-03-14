@@ -12,13 +12,14 @@ void main() {
     int a = int.parse(stdin.readLineSync()!);
     l1.add(a);
   }
+  int choice;
   do {
     print("1 for insert");
     print("2 for delete");
     print("3 for update");
     print("4 for view element");
     stdout.write("Enter your choice : ");
-    int choice = int.parse(stdin.readLineSync()!);
+    choice = int.parse(stdin.readLineSync()!);
     switch (choice) {
       case 1:
         stdout.write("Enter index:");
