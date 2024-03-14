@@ -53,5 +53,5 @@ void main() {
       default:
         print("Enter valid value");
     }
-  } while (n != 0);
+  } while (choice != 0);
 }
