@@ -12,52 +12,25 @@ class Supermarket {
 
   void input(int i) {
     print("\n======================= \n");
-    stdout.write("Enter Item Number $i :");
+    stdout.write("Enter Item Number  :");
     Item_number = int.parse(stdin.readLineSync()!);
-    stdout.write("Enter Item name $i:");
+    stdout.write("Enter Item name :");
     Item_name = stdin.readLineSync()!;
-    stdout.write("Enter Item quantity $i:");
+    stdout.write("Enter Item quantity :");
     quantity = int.parse(stdin.readLineSync()!);
-    stdout.write("Enter Tax  $i:");
+    stdout.write("Enter Tax  :");
     tax = int.parse(stdin.readLineSync()!);
-    stdout.write("Enter Discount $i :");
+    stdout.write("Enter Discount  :");
     discount = int.parse(stdin.readLineSync()!);
   }
 
   void getDetails(int i) {
     print("\n\n=========================\n\n");
-    print("Item Number  $i : $Item_number");
-    print("Item Name    $i : $Item_name");
-    print("Item Quantity$i : $quantity");
-    print("Item Tax     $i : $tax");
-    print("Item Discount$i : $discount");
-  }
-
-  void check(int n, List l1) {
-    stdout.write("Enter id :");
-    String id = stdin.readLineSync()!;
-    stdout.write("Enter password :");
-    int password = int.parse(stdin.readLineSync()!);
-    int i = 0;
-    if (password == 12345 && id == 'user') {
-      for (i; i < n; i++) {
-        if (Item_number == num) {
-          for (i = 0; i < n; i++) {
-            for (int j = 0; i < n; j++) {
-              if (l1[i].Item_num > l1[j].Item_number) {
-                Supermarket s1 = l1[j];
-                l1[j] = l1[i];
-                l1[i] = s1;
-              }
-            }
-          }
-        } else {
-          print("Item number not found !");
-        }
-      }
-    } else {
-      print("your password & id is wrong !");
-    }
+    print("Item Number   : $Item_number");
+    print("Item Name     : $Item_name");
+    print("Item Quantity : $quantity");
+    print("Item Tax      : $tax");
+    print("Item Discount : $discount");
   }
 }
 
@@ -65,64 +38,57 @@ void main() {
   stdout.write("Enter n:");
   int n = int.parse(stdin.readLineSync()!);
 
-  List l1 = [];
+  List<Supermarket> l1 = [];
   int i;
-  Supermarket s1 = Supermarket();
+  Supermarket s1 = new Supermarket();
+
+  stdout.write("Enter id :");
+  String id = stdin.readLineSync()!;
+  stdout.write("Enter password :");
+  int password = int.parse(stdin.readLineSync()!);
+  if (password == 12345 && id == 'user') {
+    print("Successfully");
+  } else {
+    print("your password & id  is wrong !\n\n");
+  }
+
   for (i = 0; i < n; i++) {
+    Supermarket s1 = Supermarket();
     s1.input(i);
-  }
-  for (i = 0; i < n; i++) {
     l1.add(s1);
-    s1.check(n, l1);
   }
+
+  do {
+    print("\n....Welcome to super market.....\n\n");
+
+    print("1 for by item num ascending number !");
+    print("2 for exit!");
+
+    stdout.write("Enter your choice :");
+    int choice = int.parse(stdin.readLineSync()!);
+    int j;
+    switch (choice) {
+      case 1:
+        for (i = 0; i < l1.length; i++) {
+          for (j = i + 1; j < l1.length; j++) {
+            if (l1[i].Item_number! > l1[j].Item_number!) {
+              Supermarket s1 = l1[j];
+              l1[j] = l1[i];
+              l1[i] = s1;
+            }
+          }
+        }
+        for (i = 1; i < l1.length; i++) {
+          l1[i].getDetails(i);
+        }
+
+        break;
+      case 2:
+        print("exit !");
+        break;
+
+      default:
+        print("Enter valid input!");
+    }
+  } while (n != 2);
 }
-  // do {
-  //   print("\n....Welcome to super market.....\n\n");
-  //   print("1 for verify id & password !");
-  //   print("2 for Item number !");
-  //   print("3 for by item num ascending number !");
-
-
-  //   stdout.write("Enter your choice :");
-  //   int choice = int.parse(stdin.readLineSync()!);
-
-  //   switch (choice) {
-  //     case 1:
-  //       stdout.write("Enter id :");
-  //       id = stdin.readLineSync()!;
-  //       int check = 0;
-  //       stdout.write("Enter password :");
-  //       int password = int.parse(stdin.readLineSync()!);
-  //       if (password == 12345 && id == 'user') {
-  //         check = 1;                                                                                                                            
-  //       } else {
-  //         print("your password & id  is wrong !\n\n");
-  //       }
-  //       break;
-
-  //     case 2:
-  //       stdout.write("Enter the Item Number : ");
-  //       int num = int.parse(stdin.readLineSync()!);
-  //       for (i = 0; i < l1.length; i++) {
-  //         if (l1[i].Item_number == num) {
-  //           l1[i].getDetails();
-  //         }
-  //       }
-  //       break;
-
-  //     case 3:
-  //       for (i = 0; i < l1.length; i++) {
-  //         for (j = i + 1; j < l1.length; j++) {
-  //           if (l1[i].Item_number! > l1[j].Item_number!) {
-  //             Supermarket s1 = l1[j];
-  //             l1[j] = l1[i];
-  //             l1[i] = s1;
-  //             s1.getDetails();
-  //           }
-  //         }
-  //       }
-
-  //       break;
-  //   }
-  // } while (n != 4);
-
