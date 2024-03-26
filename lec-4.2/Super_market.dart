@@ -7,7 +7,7 @@
 import 'dart:io';
 
 class Supermarket {
-  int? Item_number, discount, tax, quantity;
+  int? Item_number, discount, tax, quantity, choice;
   String? Item_name;
 
   void input(int i) {
@@ -32,6 +32,15 @@ class Supermarket {
     print("Item Tax      : $tax");
     print("Item Discount : $discount");
   }
+
+  void check() {
+    print("\n....Welcome to super market.....\n\n");
+
+    print("1 for by item num ascending number !");
+    print("2 for exit!");
+    stdout.write("Enter your choice :");
+    choice = int.parse(stdin.readLineSync()!);
+  }
 }
 
 void main() {
@@ -40,7 +49,7 @@ void main() {
 
   List<Supermarket> l1 = [];
   int i;
-  Supermarket s1 = new Supermarket();
+  Supermarket s1 = Supermarket();
 
   stdout.write("Enter id :");
   String id = stdin.readLineSync()!;
@@ -57,17 +66,10 @@ void main() {
     s1.input(i);
     l1.add(s1);
   }
-
+  int j;
   do {
-    print("\n....Welcome to super market.....\n\n");
-
-    print("1 for by item num ascending number !");
-    print("2 for exit!");
-
-    stdout.write("Enter your choice :");
-    int choice = int.parse(stdin.readLineSync()!);
-    int j;
-    switch (choice) {
+    s1.check();
+    switch (s1.choice) {
       case 1:
         for (i = 0; i < l1.length; i++) {
           for (j = i + 1; j < l1.length; j++) {
@@ -78,7 +80,7 @@ void main() {
             }
           }
         }
-        for (i = 1; i < l1.length; i++) {
+        for (i = 0; i < l1.length; i++) {
           l1[i].getDetails(i);
         }
 
