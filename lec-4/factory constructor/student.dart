@@ -2,68 +2,7 @@
 // import 'dart:io';
 // import 'factory1.dart';
 
-// class Student {
-//   late String name, course;
-//   late int roll_num;
-//   Student({required this.name, required this.roll_num, required this.course});
 
-//   List<Student> student1 = [
-//     Student(name: 'shalu', roll_num: 34, course: 'flutter'),
-//     Student(name: 'sudha', roll_num: 24, course: 'flutter'),
-//     Student(name: 'shalu', roll_num: 34, course: 'flutter'),
-//     Student(name: 'sudha', roll_num: 24, course: 'flutter'),
-//     Student(name: 'shalu', roll_num: 34, course: 'flutter'),
-//     Student(name: 'sudha', roll_num: 24, course: 'flutter'),
-//     Student(name: 'shalu', roll_num: 34, course: 'flutter'),
-//     Student(name: 'sudha', roll_num: 24, course: 'flutter'),
-//   ];
-// }
-
-// List StudentList = [
-//   {'Name': 'Swati', 'roll_num': 12, 'Course': 'Flutter'},
-//   {'Name': 'sonu', 'roll_num': 11, 'Course': 'Flutter'},
-//   {'Name': 'sudha', 'roll_num': 13, 'Course': 'Flutter'},
-//   {'Name': 'shalu', 'roll_num': 18, 'Course': 'Flutter'},
-//   // {'Name': 'shakti','roll_num': 15, 'Course': 'Flutter'},
-//   // {'Name': 'sejal', 'roll_num': 16, 'Course': 'Flutter'},
-//   // {'Name': 'sonu',  'roll_num': 19, 'Course': 'Flutter'},
-//   // {'Name': 'sudha', 'roll_num': 14, 'Course': 'Flutter'},
-//   // {'Name': 'shakti','roll_num': 17, 'Course': 'Flutter'},
-//   // {'Name': 'sejal', 'roll_num': 16, 'Course': 'Flutter'},
-//   // {'Name': 'Swati', 'roll_num': 12, 'Course': 'Flutter'},
-//   // {'Name': 'sonu',  'roll_num': 11, 'Course': 'Flutter'},
-//   // {'Name': 'sudha', 'roll_num': 13, 'Course': 'Flutter'},
-//   // {'Name': 'shalu', 'roll_num': 18, 'Course': 'Flutter'},
-//   // {'Name': 'shakti','roll_num': 15, 'Course': 'Flutter'},
-//   // {'Name': 'sejal', 'roll_num': 16, 'Course': 'Flutter'},
-//   // {'Name': 'sonu',  'roll_num': 19, 'Course': 'Flutter'},
-//   // {'Name': 'sudha', 'roll_num': 20, 'Course': 'Flutter'},
-//   // {'Name': 'shakti','roll_num': 29, 'Course': 'Flutter'},
-//   // {'Name': 'sejal', 'roll_num': 28, 'Course': 'Flutter'},
-//   // {'Name': 'Swati', 'roll_num': 27, 'Course': 'Flutter'},
-//   // {'Name': 'sonu',  'roll_num': 26, 'Course': 'Flutter'},
-//   // {'Name': 'sudha', 'roll_num': 25, 'Course': 'Flutter'},
-//   // {'Name': 'shalu', 'roll_num': 21, 'Course': 'Flutter'},
-//   // {'Name': 'shakti','roll_num': 23, 'Course': 'Flutter'},
-//   // {'Name': 'sejal', 'roll_num': 24, 'Course': 'Flutter'},
-//   // {'Name': 'sonu',  'roll_num': 22, 'Course': 'Flutter'},
-//   // {'Name': 'sudha', 'roll_num': 14, 'Course': 'Flutter'},
-//   // {'Name': 'shakti','roll_num': 17, 'Course': 'Flutter'},
-//   // {'Name': 'sejal', 'roll_num': 16, 'Course': 'Flutter'},
-// ];
-// List<StudentModel> l1 = [];
-// void main() {
-//   StudentModel s1 = StudentModel.fromStudents(student1: StudentList[0]);
-
-//   // for (int i = 0; i < StudentList.length; i++) {
-//   //   StudentModel s1 = StudentModel.fromStudents(student1: StudentList[i]);
-//   //   l1.add(s1);
-
-//   // for (int i = 0; i < l1.length; i++) {
-//   stdout.write('Name : ${l1[0].name}' + ',roll_num : ${l1[0].roll_num}');
-
-//   // }
-//
 import 'dart:io';
 
 import 'factory1.dart';
@@ -126,3 +65,80 @@ void main() {
         ',course: ${l1[i].course},');
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Student {
+//   late String name, course;
+//   late int roll_num;
+//   Student({required this.name, required this.roll_num, required this.course});
+
+//   List<Student> student1 = [
+//     Student(name: 'shalu', roll_num: 34, course: 'flutter'),
+//     Student(name: 'sudha', roll_num: 24, course: 'flutter'),
+//     Student(name: 'shalu', roll_num: 34, course: 'flutter'),
+//     Student(name: 'sudha', roll_num: 24, course: 'flutter'),
+//     Student(name: 'shalu', roll_num: 34, course: 'flutter'),
+//     Student(name: 'sudha', roll_num: 24, course: 'flutter'),
+//     Student(name: 'shalu', roll_num: 34, course: 'flutter'),
+//     Student(name: 'sudha', roll_num: 24, course: 'flutter'),
+//   ];
+// }
+
+// List StudentList = [
+//   {'Name': 'Swati', 'roll_num': 12, 'Course': 'Flutter'},
+//   {'Name': 'sonu', 'roll_num': 11, 'Course': 'Flutter'},
+//   {'Name': 'sudha', 'roll_num': 13, 'Course': 'Flutter'},
+//   {'Name': 'shalu', 'roll_num': 18, 'Course': 'Flutter'},
+//   // {'Name': 'shakti','roll_num': 15, 'Course': 'Flutter'},
+//   // {'Name': 'sejal', 'roll_num': 16, 'Course': 'Flutter'},
+//   // {'Name': 'sonu',  'roll_num': 19, 'Course': 'Flutter'},
+//   // {'Name': 'sudha', 'roll_num': 14, 'Course': 'Flutter'},
+//   // {'Name': 'shakti','roll_num': 17, 'Course': 'Flutter'},
+//   // {'Name': 'sejal', 'roll_num': 16, 'Course': 'Flutter'},
+//   // {'Name': 'Swati', 'roll_num': 12, 'Course': 'Flutter'},
+//   // {'Name': 'sonu',  'roll_num': 11, 'Course': 'Flutter'},
+//   // {'Name': 'sudha', 'roll_num': 13, 'Course': 'Flutter'},
+//   // {'Name': 'shalu', 'roll_num': 18, 'Course': 'Flutter'},
+//   // {'Name': 'shakti','roll_num': 15, 'Course': 'Flutter'},
+//   // {'Name': 'sejal', 'roll_num': 16, 'Course': 'Flutter'},
+//   // {'Name': 'sonu',  'roll_num': 19, 'Course': 'Flutter'},
+//   // {'Name': 'sudha', 'roll_num': 20, 'Course': 'Flutter'},
+//   // {'Name': 'shakti','roll_num': 29, 'Course': 'Flutter'},
+//   // {'Name': 'sejal', 'roll_num': 28, 'Course': 'Flutter'},
+//   // {'Name': 'Swati', 'roll_num': 27, 'Course': 'Flutter'},
+//   // {'Name': 'sonu',  'roll_num': 26, 'Course': 'Flutter'},
+//   // {'Name': 'sudha', 'roll_num': 25, 'Course': 'Flutter'},
+//   // {'Name': 'shalu', 'roll_num': 21, 'Course': 'Flutter'},
+//   // {'Name': 'shakti','roll_num': 23, 'Course': 'Flutter'},
+//   // {'Name': 'sejal', 'roll_num': 24, 'Course': 'Flutter'},
+//   // {'Name': 'sonu',  'roll_num': 22, 'Course': 'Flutter'},
+//   // {'Name': 'sudha', 'roll_num': 14, 'Course': 'Flutter'},
+//   // {'Name': 'shakti','roll_num': 17, 'Course': 'Flutter'},
+//   // {'Name': 'sejal', 'roll_num': 16, 'Course': 'Flutter'},
+// ];
+// List<StudentModel> l1 = [];
+// void main() {
+//   StudentModel s1 = StudentModel.fromStudents(student1: StudentList[0]);
+
+//   // for (int i = 0; i < StudentList.length; i++) {
+//   //   StudentModel s1 = StudentModel.fromStudents(student1: StudentList[i]);
+//   //   l1.add(s1);
+
+//   // for (int i = 0; i < l1.length; i++) {
+//   stdout.write('Name : ${l1[0].name}' + ',roll_num : ${l1[0].roll_num}');
+
+//   // }
+//
