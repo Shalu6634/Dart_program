@@ -30,7 +30,7 @@ void main() {
   print("Employee Salary: ${employee.salary}");
   print("Employee Designation: ${employee.designation}");
 
-  employee.setvalue("Shalu",30000,"developer");
+  employee.setvalue("Ekta Trivedi",50000,"HR");
 
   print("Updated Employee Name: ${employee.name}");
   print("Updated Employee Salary: ${employee.salary}");
