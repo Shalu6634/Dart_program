@@ -1,5 +1,5 @@
 
-3: E-commerce Order Management
+// 3: E-commerce Order Management
 // Create a class Product with the following properties:
 
 // productId
