@@ -1,3 +1,5 @@
+
+3: E-commerce Order Management
 // Create a class Product with the following properties:
 
 // productId
@@ -11,56 +13,38 @@
 
 // Use encapsulation for properties in Product and Order.
 // Use object composition by including Product objects inside Order.
-
-import 'dart:convert';
-import 'dart:io';
-
+  
 class Product {
-  int? _proId, _price;
-  String? _name;
+  int proId;
+  String name;
+  int price;
 
-  Product(this._proId, this._name, this._price);
-
-  void setProduct(int? proId, price, String? name) {
-    this._name = name;
-    this._price = price;
-    this._proId = proId;
-    // stdout.write("Enter product id : ");
-    // _proId = int.parse(stdin.readLineSync()!);
-    // stdout.write("Enter product name : ");
-    // _name = stdin.readLineSync()!;
-    // stdout.write("Enter product price : ");
-    // _price = int.parse(stdin.readLineSync()!);
-  }
-
-  void getProduct() {
-    print("Product Id: $_proId\nName: $_name\nPrice: $_price");
-  }
+  Product({required this.proId, required this.name, required this.price});
 }
 
 class Order {
-  List<Product> p1 = [];
+  List<Product> products;
 
-  void addProduct(Product product) {
-    p1.add(product);
-  }
+  Order(this.products);
 
   int calculateTotal() {
-    int total = 0;
-    for (int i = 0; i < p1.length; i++) {
-      total += p1[i]._price!;
-    }
-    return total;
+  int total = 0;
+  for (int i = 0; i < products.length; i++) {
+    total += products[i].price;
   }
+  return total;
+}
+
 }
 
 void main() {
-  Order r1 = Order();
+ 
+  Product product1 = Product(proId: 1, name: "Laptop", price: 15000);
+  Product product2 = Product(proId: 2, name: "Phone", price: 800);
+  Product product3 = Product(proId: 3, name: "Headphones", price: 200);
 
-  for(int i=0; i<)
-  {
+  Order order = Order([product1, product2, product3]);
 
-  }
-  r1.addProduct();
-  r1.calculateTotal();
+ print('----------Total Amount---------------------');
+  print("Order price total product: ${order.calculateTotal()}/-");
 }
